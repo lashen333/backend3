@@ -1,4 +1,4 @@
-// src\services\variant.services.ts
+// src\services\variant.service.ts
 import type {UTM,Variant} from"../types/variant.js";
 import {RULES,VARIANTS} from "../models/variant.model.js";
 
