@@ -15,8 +15,13 @@ async function main() {
     },
   }));
 
-  const res = await VariantModel.bulkWrite(ops);
-  console.log("Seed done:", res.result || res);
+  const res = await VariantModel.bulkWrite(ops,{ordered:false});
+  console.log({
+    inserted:res.insertedCount,
+    matched:res.matchedCount,
+    modified:res.modifiedCount,
+    upserts:res.upsertedCount,
+  });
 }
 
 main().catch((e) => {
